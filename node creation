@@ -1,0 +1,11 @@
+class DecisionTreeNode:
+    def __init__(self, feature=None, label=None):
+        self.feature = feature  # Feature associated with the node
+        self.label = label  # Label assigned to the node (for leaf nodes)
+        self.children = {}  # Dictionary to store child nodes
+        
+    def add_child(self, value, child_node):
+        self.children[value] = child_node
+        
+    def is_leaf(self):
+        return self.label is not None
